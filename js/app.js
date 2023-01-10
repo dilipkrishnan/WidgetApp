@@ -61,6 +61,7 @@
       // Update DOM elements
       reading.textContent = data.daily.temperature_2m_max[0];
       //statusimage.textContent = data.daily.weathercode[0];
+      console.log(data.daily.weathercode[0]);
       switch(data.daily.weathercode[0]){
         case 0 | 1:
           statusimage.style["background-image"] = "url('../img/2.png')";
@@ -71,7 +72,8 @@
         case 3:
           statusimage.style["background-image"] = "url('../img/6.png')";
           break;
-        case 45 | 48:
+        case 45:
+        case 48:
           statusimage.style["background-image"] = "url('../img/7.png')";
           break;
         case 51 | 53 | 55:
@@ -105,7 +107,7 @@
           statusimage.style["background-image"] = "url('../img/19.png')";
           break;
         default:
-          statusimage.style["background-image"] = "url('../img/2.png')";
+          statusimage.style["background-image"] = "url('../img/211.png')";
       }
       
     } else {

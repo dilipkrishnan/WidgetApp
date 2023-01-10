@@ -10,8 +10,9 @@
 body{
   min-height: 300px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  /*justify-content: center;
+  align-items: center;*/
   background: #282F3E;
 }
 
@@ -19,7 +20,9 @@ body{
   position: relative;
   color: #ffffff;
   background: #393E46;
-  width: 425px;
+  width: 400px;
+  height: 250px;
+  margin-top: 50px;
   padding: 20px 45px;
   box-shadow: 0 5px 25px rgba(0, 173, 181, 0.8);
   border-radius: 10px;
@@ -145,7 +148,9 @@ body{
   color: #ffffff;
   background: #393E46;
   margin-left: 75px;
+  margin-top: 50px;
   width: 600px;
+  height: 250px;
   padding: 10px 10px;
   box-shadow: 0 5px 25px rgba(0, 173, 181, 0.8);
   border-radius: 10px;
@@ -283,9 +288,11 @@ body{
   position: relative;
   color: #ffffff;
   background: #393E46;
-  width: 600px;
+  width: 500px;
+  height: 250px;
   margin-left: 75px;
-  padding: 20px 45px;
+  margin-top: 50px;
+  padding: 10px 45px;
   box-shadow: 0 5px 25px rgba(0, 173, 181, 0.8);
   border-radius: 10px;
   display: flex;
@@ -309,7 +316,7 @@ body{
 }
 
 .quote{
-  height: 130px;
+  height: 150px;
   font-size: 1.4em;
   background: -webkit-linear-gradient(90deg,#ff5e9a,#ffb960);
   -webkit-text-fill-color: transparent;
@@ -325,34 +332,20 @@ body{
 }
 
 .refresh-button{
-  margin-left: 25px;
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 25px;
   background-image: url("../img/reload.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50px;
-  height: 50px;
-  margin-top: 150px;
+  width: 30px;
+  height: 250px;
 }
 
 .refresh-button:hover{
-  margin-left: 25px;
   background-image: url("../img/reload_hover.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50px;
-  height: 50px;
-}
-
-@media screen and (max-width: 800px) {
-  body{ 
-    margin-top: 50px;
-    flex-wrap: wrap;
- }
-
- .weather-app{
-  margin-top: 100px;
-  margin-left: 0px;
- }
 }
