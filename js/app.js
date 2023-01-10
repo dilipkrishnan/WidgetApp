@@ -136,68 +136,6 @@
       forcaststatus3.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[3])+".png')";
       forcaststatus4.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[4])+".png')";
       forcaststatus5.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[5])+".png')";
-
-      /*
-      switch(data.daily.weathercode[0]){
-        case 0 | 1:
-          statusimage.style["background-image"] = "url('../img/2.png')";
-          break;
-        case 2:
-          statusimage.style["background-image"] = "url('../img/13.png')";
-          break;
-        case 3:
-          statusimage.style["background-image"] = "url('../img/6.png')";
-          break;
-        case 45:
-        case 48:
-          statusimage.style["background-image"] = "url('../img/7.png')";
-          break;
-        case 51:
-        case 53:
-        case 55:
-          statusimage.style["background-image"] = "url('../img/20.png')";
-          break;
-        case 56:
-        case 57:
-          statusimage.style["background-image"] = "url('../img/20.png')";
-          break;
-        case 61:
-        case 63:
-        case 65:
-          statusimage.style["background-image"] = "url('../img/11.png')";
-          break;
-        case 66:
-        case 67:
-          statusimage.style["background-image"] = "url('../img/11.png')";
-          break;
-        case 71:
-        case 73:
-        case 75:
-          statusimage.style["background-image"] = "url('../img/26.png')";
-          break;
-        case 77:
-          statusimage.style["background-image"] = "url('../img/26.png')";
-          break;
-        case 80:
-        case 81:
-        case 82:
-          statusimage.style["background-image"] = "url('../img/11.png')";
-          break;
-        case 85:
-        case 86:
-          statusimage.style["background-image"] = "url('../img/26.png')";
-          break;
-        case 95:
-          statusimage.style["background-image"] = "url('../img/8.png')";
-          break;
-        case 96:
-        case 99:
-          statusimage.style["background-image"] = "url('../img/19.png')";
-          break;
-        default:
-          statusimage.style["background-image"] = "url('../img/2.png')";
-      }
-      */
       
     } else {
       quote.textContent = "An error occured";

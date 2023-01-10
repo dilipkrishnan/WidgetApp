@@ -186,14 +186,13 @@ body{
 
 .weather-top{
   display: flex;
-  height: 100px;
+  height: 130px;
   align-items: center;
 }
 
 .weather-bottom{
   display: flex;
-  height: 85px;
-  padding-top: 10px;
+  height: 120px;
 }
 
 .temperature{
@@ -238,7 +237,6 @@ body{
   height: 100px;
   display: flex;
   justify-content: center;
-  background-image: url("../img/17.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -264,6 +262,7 @@ body{
 .forcast-status{
   display: flex;
   height: 50px;
+  margin-top: 5px;
   justify-content: center;
   background-image: url("../img/3.png");
   background-position: center;
@@ -274,6 +273,7 @@ body{
 .forcast-temp{
   display: flex;
   height: 25px;
+  margin-top: 5px;
   font-size: 1.2em;
   justify-content: center;
   background: -webkit-linear-gradient(90deg,#ff5e9a,#ffb960);
