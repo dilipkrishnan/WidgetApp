@@ -11,8 +11,6 @@ body{
   min-height: 300px;
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: center;
-  align-items: center;*/
   background: #282F3E;
 }
 
@@ -199,7 +197,8 @@ body{
 }
 
 .temperature{
-  width: 200px;
+  width: 150px;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   background: -webkit-linear-gradient(90deg,#24ff6d,#2f93f1);
@@ -235,7 +234,7 @@ body{
 }
 
 .status-image{
-  width: 200px;
+  width: 250px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -248,11 +247,14 @@ body{
 .forcast{
   font-size: 1em;
   width: 120px;
-  padding: 0px 40px;
+  padding: 0px 20px;
 }
 
 .forcast-day{
   display: flex;
+  height: 25px;
+  font-size: 1.3em;
+  font-weight: 500;
   justify-content: center;
   background: -webkit-linear-gradient(90deg,#634dff,#5fd4ff);
   -webkit-text-fill-color: transparent;
@@ -261,6 +263,7 @@ body{
 
 .forcast-status{
   display: flex;
+  height: 50px;
   justify-content: center;
   background-image: url("../img/3.png");
   background-position: center;
@@ -270,6 +273,8 @@ body{
 
 .forcast-temp{
   display: flex;
+  height: 25px;
+  font-size: 1.2em;
   justify-content: center;
   background: -webkit-linear-gradient(90deg,#ff5e9a,#ffb960);
   -webkit-text-fill-color: transparent;

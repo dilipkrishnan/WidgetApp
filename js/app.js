@@ -10,7 +10,9 @@
     //set AM/PM and 12-hour time
     if (hours >= 12){
         period = "PM";
-        hours = hours - 12;
+        if(hours > 12){
+          hours = hours - 12;
+        }
     }
 
     // add 0 for values less than 10
@@ -39,6 +41,59 @@
       window.location.reload();
   }
 
+  function weatherImage(code){
+
+    switch(code){
+      case 0 | 1:
+        return 2;
+      case 2:
+        return 13;
+      case 3:
+        return 6;
+      case 45:
+      case 48:
+        return 7;
+      case 51:
+      case 53:
+      case 55:
+        return 20;
+      case 56:
+      case 57:
+        return 20;
+      case 61:
+      case 63:
+      case 65:
+        return 11;
+      case 66:
+      case 67:
+        return 11;
+      case 71:
+      case 73:
+      case 75:
+        return 26;
+        break;
+      case 77:
+        return 26;
+      case 80:
+      case 81:
+      case 82:
+        return 11;
+      case 85:
+      case 86:
+        return 26;
+      case 95:
+        return 8;
+        break;
+      case 96:
+      case 99:
+        return 19;
+        break;
+      default:
+        return 2;
+    }
+
+  }
+
   async function updateQuote() {
     // Fetch a random quote from the Quotable API
     const response = await fetch("https://api.quotable.io/random");
@@ -55,13 +110,34 @@
 
   async function getWeather() {
     // Fetch a data from the Open Metro API
-    const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=43.58&longitude=79.64&daily=temperature_2m_max,weathercode&timezone=Canada/Eastern");
+    const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=43.58&longitude=-79.64&daily=temperature_2m_max,weathercode&timezone=Canada/Eastern");
+    const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const data = await response.json();
     if (response.ok) {
       // Update DOM elements
-      reading.textContent = data.daily.temperature_2m_max[0];
-      //statusimage.textContent = data.daily.weathercode[0];
-      console.log(data.daily.weathercode[0]);
+      reading.textContent = Math.round(data.daily.temperature_2m_max[0]);
+      forcastday1.textContent = days[new Date(data.daily.time[1]).getDay()];
+      forcastday2.textContent = days[new Date(data.daily.time[2]).getDay()];
+      forcastday3.textContent = days[new Date(data.daily.time[3]).getDay()];
+      forcastday4.textContent = days[new Date(data.daily.time[4]).getDay()];
+      forcastday5.textContent = days[new Date(data.daily.time[5]).getDay()];
+
+      forcastreading1.textContent = Math.round(data.daily.temperature_2m_max[1]);
+      forcastreading2.textContent = Math.round(data.daily.temperature_2m_max[2]);
+      forcastreading3.textContent = Math.round(data.daily.temperature_2m_max[3]);
+      forcastreading4.textContent = Math.round(data.daily.temperature_2m_max[4]);
+      forcastreading5.textContent = Math.round(data.daily.temperature_2m_max[5]);
+
+      statusimage.style["background-image"] = "url('../img/"+ weatherImage(data.daily.weathercode[0])+".png')";
+
+      forcaststatus1.style["background-image"] = "url('../img/"+ weatherImage
+      (data.daily.weathercode[1])+".png')";
+      forcaststatus2.style["background-image"] = "url('../img/"+ weatherImage(data.daily.weathercode[2])+".png')";
+      forcaststatus3.style["background-image"] = "url('../img/"+ weatherImage(data.daily.weathercode[3])+".png')";
+      forcaststatus4.style["background-image"] = "url('../img/"+ weatherImage(data.daily.weathercode[4])+".png')";
+      forcaststatus5.style["background-image"] = "url('../img/"+ weatherImage(data.daily.weathercode[5])+".png')";
+
+      /*
       switch(data.daily.weathercode[0]){
         case 0 | 1:
           statusimage.style["background-image"] = "url('../img/2.png')";
@@ -76,39 +152,52 @@
         case 48:
           statusimage.style["background-image"] = "url('../img/7.png')";
           break;
-        case 51 | 53 | 55:
+        case 51:
+        case 53:
+        case 55:
           statusimage.style["background-image"] = "url('../img/20.png')";
           break;
-        case 56 | 57:
+        case 56:
+        case 57:
           statusimage.style["background-image"] = "url('../img/20.png')";
           break;
-        case 61 | 63 | 65:
+        case 61:
+        case 63:
+        case 65:
           statusimage.style["background-image"] = "url('../img/11.png')";
           break;
-        case 66 | 67:
+        case 66:
+        case 67:
           statusimage.style["background-image"] = "url('../img/11.png')";
           break;
-        case 71 | 73 | 75:
+        case 71:
+        case 73:
+        case 75:
           statusimage.style["background-image"] = "url('../img/26.png')";
           break;
         case 77:
           statusimage.style["background-image"] = "url('../img/26.png')";
           break;
-        case 80 | 81 | 82:
+        case 80:
+        case 81:
+        case 82:
           statusimage.style["background-image"] = "url('../img/11.png')";
           break;
-        case 85 | 86:
+        case 85:
+        case 86:
           statusimage.style["background-image"] = "url('../img/26.png')";
           break;
         case 95:
           statusimage.style["background-image"] = "url('../img/8.png')";
           break;
-        case 96 | 99:
+        case 96:
+        case 99:
           statusimage.style["background-image"] = "url('../img/19.png')";
           break;
         default:
-          statusimage.style["background-image"] = "url('../img/211.png')";
+          statusimage.style["background-image"] = "url('../img/2.png')";
       }
+      */
       
     } else {
       quote.textContent = "An error occured";
@@ -144,10 +233,24 @@
   // Powered by Open Metro
   const reading = document.querySelector(".reading");
   const statusimage = document.querySelector(".status-image");
+  const forcastday1 = document.querySelector(".fd1");
+  const forcastday2 = document.querySelector(".fd2");
+  const forcastday3 = document.querySelector(".fd3");
+  const forcastday4 = document.querySelector(".fd4");
+  const forcastday5 = document.querySelector(".fd5");
+
+  const forcastreading1 = document.querySelector(".fr1");
+  const forcastreading2 = document.querySelector(".fr2");
+  const forcastreading3 = document.querySelector(".fr3");
+  const forcastreading4 = document.querySelector(".fr4");
+  const forcastreading5 = document.querySelector(".fr5");
+
+  const forcaststatus1 = document.querySelector(".fs1");
+  const forcaststatus2 = document.querySelector(".fs2");
+  const forcaststatus3 = document.querySelector(".fs3");
+  const forcaststatus4 = document.querySelector(".fs4");
+  const forcaststatus5 = document.querySelector(".fs5");
+  
 
   // call updateQuote once when page loads
   window.onload = getWeather();
-
-
- 
- 
