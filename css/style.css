@@ -144,7 +144,7 @@ body{
   position: relative;
   color: #ffffff;
   background: #393E46;
-  margin-left: 100px;
+  margin-left: 75px;
   width: 600px;
   padding: 10px 10px;
   box-shadow: 0 5px 25px rgba(0, 173, 181, 0.8);
@@ -279,6 +279,71 @@ body{
   font-size: .7em;
 }
 
+.quotes{
+  position: relative;
+  color: #ffffff;
+  background: #393E46;
+  width: 600px;
+  margin-left: 75px;
+  padding: 20px 45px;
+  box-shadow: 0 5px 25px rgba(0, 173, 181, 0.8);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quotes::before{
+  content: '';
+  position: absolute;
+  background: linear-gradient(45deg,#24ff6d,#2f93f1,#ff5e9a);
+  background-size: 200% ,200%;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  filter: blur(10px);
+  animation: glowing 5s ease infinite;
+}
+
+.quote{
+  height: 130px;
+  font-size: 1.4em;
+  background: -webkit-linear-gradient(90deg,#ff5e9a,#ffb960);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.autor{
+  height: 35px;
+  font-size: 1.3em;
+  background: -webkit-linear-gradient(90deg,#ae4af6,#ff98d1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.refresh-button{
+  margin-left: 25px;
+  background-image: url("../img/reload.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  margin-top: 150px;
+}
+
+.refresh-button:hover{
+  margin-left: 25px;
+  background-image: url("../img/reload_hover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
 
 @media screen and (max-width: 800px) {
   body{ 
