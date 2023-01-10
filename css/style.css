@@ -9,11 +9,10 @@
 
 body{
   min-height: 300px;
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1e232f;
+  background: #282F3E;
 }
 
 .digital-clock{
@@ -283,7 +282,8 @@ body{
 
 @media screen and (max-width: 800px) {
   body{ 
-   flex-wrap: wrap;
+    margin-top: 50px;
+    flex-wrap: wrap;
  }
 
  .weather-app{
