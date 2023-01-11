@@ -12,6 +12,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   background: #282F3E;
+  transform: scale(.75);
 }
 
 .digital-clock{

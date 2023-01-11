@@ -100,8 +100,13 @@
     const data = await response.json();
     if (response.ok) {
       // Update DOM elements
-      quote.textContent = "\" " + data.content + " \"";
-      cite.textContent = "- " + data.author;
+      if(data.content.length < 130){
+        quote.textContent = "\" " + data.content + " \"";
+        cite.textContent = "- " + data.author;
+        console.log(data.content.length);
+      }else{
+        updateQuote();
+      }
     } else {
       quote.textContent = "An error occured";
       console.log(data);
