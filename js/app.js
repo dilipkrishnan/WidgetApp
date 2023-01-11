@@ -100,7 +100,7 @@
     const data = await response.json();
     if (response.ok) {
       // Update DOM elements
-      if(data.content.length < 130){
+      if(data.content.length < 125){
         quote.textContent = "\" " + data.content + " \"";
         cite.textContent = "- " + data.author;
         console.log(data.content.length);

@@ -9,87 +9,89 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
+  <div class="container">
+    
+    <div onClick="refreshPage()" class="refresh-button"></div>
 
-  <div onClick="refreshPage()" class="refresh-button"></div>
-
-    <div class="digital-clock">
-      <div class="time">
-        <span class="hours">00</span>
-        <span class="dots">:</span>
-        <span class="minutes">00</span>
-        <div class="right-side">
-            <span class="period">PM</span>
-            <span class="seconds">00</span>
+      <div class="digital-clock">
+        <div class="time">
+          <span class="hours">00</span>
+          <span class="dots">:</span>
+          <span class="minutes">00</span>
+          <div class="right-side">
+              <span class="period">PM</span>
+              <span class="seconds">00</span>
+          </div>
         </div>
+
+        <div class="calendar">
+          <span class="day-name">Day</span>,
+          <span class="day-number">Date</span>
+          <span class="month-name">Month</span>
+          <span class="year">year</span>
+        </div>
+
       </div>
 
-      <div class="calendar">
-        <span class="day-name">Day</span>,
-        <span class="day-number">Date</span>
-        <span class="month-name">Month</span>
-        <span class="year">year</span>
+      <div class="weather-app">
+        <div class="weather-top">
+          <div class="temperature">
+            <div class="reading"></div>
+            <div class="degree">&#8451</div>
+          </div>
+          <div class="status-image"></div>
+          <div class="current-location">
+            <div class="current-city">Mississauga</div>
+            <div class="current-state">ON</div>
+          </div>
+        </div>
+        <div class="weather-bottom">
+          <div class="forcast">
+            <div class="forcast-day fd1"></div>
+            <div class="forcast-status fs1"></div>
+            <div class="forcast-temp">
+              <div class="forcast-reading fr1"></div>
+              <div class="forcast-degree">&#8451</div>
+            </div>
+          </div>
+          <div class="forcast">
+            <div class="forcast-day fd2"></div>
+            <div class="forcast-status fs2"></div>
+            <div class="forcast-temp">
+              <div class="forcast-reading fr2"></div>
+              <div class="forcast-degree">&#8451</div>
+            </div>
+          </div><div class="forcast">
+            <div class="forcast-day fd3"></div>
+            <div class="forcast-status fs3"></div>
+            <div class="forcast-temp">
+              <div class="forcast-reading fr3"></div>
+              <div class="forcast-degree">&#8451</div>
+            </div>
+          </div><div class="forcast">
+            <div class="forcast-day fd4"></div>
+            <div class="forcast-status fs4"></div>
+            <div class="forcast-temp">
+              <div class="forcast-reading fr4"></div>
+              <div class="forcast-degree">&#8451</div>
+            </div>
+          </div><div class="forcast">
+            <div class="forcast-day fd5"></div>
+            <div class="forcast-status fs5"></div>
+            <div class="forcast-temp">
+              <div class="forcast-reading fr5"></div>
+              <div class="forcast-degree">&#8451</div>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
-    </div>
-
-    <div class="weather-app">
-      <div class="weather-top">
-        <div class="temperature">
-          <div class="reading"></div>
-          <div class="degree">&#8451</div>
-        </div>
-        <div class="status-image"></div>
-        <div class="current-location">
-          <div class="current-city">Mississauga</div>
-          <div class="current-state">ON</div>
-        </div>
+      <div class="quotes">
+          <div class="quote">Loading..</div>
+          <div class="autor"></div>
       </div>
-      <div class="weather-bottom">
-        <div class="forcast">
-          <div class="forcast-day fd1"></div>
-          <div class="forcast-status fs1"></div>
-          <div class="forcast-temp">
-            <div class="forcast-reading fr1"></div>
-            <div class="forcast-degree">&#8451</div>
-          </div>
-        </div>
-        <div class="forcast">
-          <div class="forcast-day fd2"></div>
-          <div class="forcast-status fs2"></div>
-          <div class="forcast-temp">
-            <div class="forcast-reading fr2"></div>
-            <div class="forcast-degree">&#8451</div>
-          </div>
-        </div><div class="forcast">
-          <div class="forcast-day fd3"></div>
-          <div class="forcast-status fs3"></div>
-          <div class="forcast-temp">
-            <div class="forcast-reading fr3"></div>
-            <div class="forcast-degree">&#8451</div>
-          </div>
-        </div><div class="forcast">
-          <div class="forcast-day fd4"></div>
-          <div class="forcast-status fs4"></div>
-          <div class="forcast-temp">
-            <div class="forcast-reading fr4"></div>
-            <div class="forcast-degree">&#8451</div>
-          </div>
-        </div><div class="forcast">
-          <div class="forcast-day fd5"></div>
-          <div class="forcast-status fs5"></div>
-          <div class="forcast-temp">
-            <div class="forcast-reading fr5"></div>
-            <div class="forcast-degree">&#8451</div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-
-    <div class="quotes">
-        <div class="quote">Loading..</div>
-        <div class="autor"></div>
-    </div>
+  </div>
 
     <script src="js/app.js"></script>
     
