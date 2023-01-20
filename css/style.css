@@ -14,7 +14,7 @@ body{
   min-height: 350px;
   display: flex;
   flex-wrap: wrap;
-  background: #282F3E;
+  min-width: fit-content;
 }
 
 .digital-clock{
@@ -343,7 +343,7 @@ body{
 }
 
 .refresh-button{
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 15px;
   margin-right: 25px;
   background-image: url("../img/reload.png");
@@ -351,7 +351,7 @@ body{
   background-repeat: no-repeat;
   background-size: contain;
   width: 30px;
-  height: 250px;
+  height: 200px;
 }
 
 .refresh-button:hover{
