@@ -1,3 +1,8 @@
+//show the app only on desktop
+if(document.body.clientWidth < 1800){
+  document.getElementById("main").style.visibility = "hidden";
+}
+  
   //Get current time
   function clock(){
           
@@ -96,7 +101,7 @@
 
   async function updateQuote() {
     // Fetch a random quote from the Quotable API
-    const response = await fetch("https://api.quotable.io/random");
+    const response = await fetch("http://api.quotable.io/random");
     const data = await response.json();
     if (response.ok) {
       // Update DOM elements
@@ -115,7 +120,7 @@
 
   async function getWeather() {
     // Fetch a data from the Open Metro API
-    const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=43.58&longitude=-79.64&daily=temperature_2m_max,weathercode&timezone=Canada/Eastern");
+    const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=43.490825&longitude=-80.397917&daily=temperature_2m_max,weathercode&timezone=Canada/Eastern");
     const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const data = await response.json();
     if (response.ok) {
@@ -197,3 +202,14 @@
 
   // call updateQuote once when page loads
   window.onload = getWeather();
+
+  /* function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+  }
+  
+  if (isMobile()) {
+    console.log("Mobile device detected");
+    console.log(document.body.clientWidth);
+  }*/
+
