@@ -1,9 +1,4 @@
-//show the app only on desktop
-if(document.body.clientWidth < 1500){
-  document.getElementById("main").style.visibility = "hidden";
-}
-  
-  //Get current time
+//Get current time
   function clock(){
           
     var today = new Date();

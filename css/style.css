@@ -6,15 +6,32 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+#main{
   background: #282F3E;
 }
 
+@media (max-width: 1200px) {
+
+  #main{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 1750px) {
+
+  #section3{
+    display: none;
+  }
+  
+}
+
 .container{
-  min-height: 350px;
+  min-height: 300px;
   display: flex;
   flex-wrap: wrap;
   min-width: fit-content;
+  max-width: 1800px;
 }
 
 .digital-clock{
