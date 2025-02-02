@@ -7,8 +7,20 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+  background-color: #f0f0f0;
+}
+
 #main{
   background: #282F3E;
+}
+
+@media (max-width: 500px) {
+
+  #main{
+    display: none;
+  }
+  
 }
 
 @media (max-width: 1200px) {
