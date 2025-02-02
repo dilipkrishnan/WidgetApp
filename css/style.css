@@ -15,38 +15,6 @@ body{
   background: #282F3E;
 }
 
-@media (max-width: 200px) {
-
-  #main{
-    display: none;
-  }
-  
-}
-
-@media (max-width: 1200px) {
-
-  #section2{
-    display: none;
-  }
-  
-}
-
-@media (max-width: 1750px) {
-
-  #section3{
-    display: none;
-  }
-
-  #button1{
-    display: none;
-  }
-
-  #section1{
-    margin-left: 50px;
-  }
-  
-}
-
 .container{
   min-height: 300px;
   display: flex;
@@ -397,4 +365,49 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media (max-width: 200px) {
+
+  #main{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 350px) {
+
+  .digital-clock{
+    width: 300px;
+  }
+
+  .hours, .minutes {
+    font-size: 5em;
+    width: 100px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  #section2{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 1750px) {
+
+  #section3{
+    display: none;
+  }
+
+  #button1{
+    display: none;
+  }
+
+  #section1{
+    margin-left: 25px;
+  }
+  
 }
