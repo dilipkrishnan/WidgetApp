@@ -15,7 +15,7 @@ body{
   background: #282F3E;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 200px) {
 
   #main{
     display: none;
@@ -35,6 +35,14 @@ body{
 
   #section3{
     display: none;
+  }
+
+  #button1{
+    display: none;
+  }
+
+  #section1{
+    margin-left: 50px;
   }
   
 }
