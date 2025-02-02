@@ -375,15 +375,34 @@ body{
   
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 
   .digital-clock{
-    width: 300px;
+    width: 250px;
+    height: 135px;
   }
 
   .hours, .minutes {
-    font-size: 5em;
-    width: 100px;
+    font-size: 3.5em;
+    width: 75px;
+    padding: 0;
+    line-height: 100px;
+  }
+
+  .dots{
+    line-height: 100px;
+  }
+
+  .right-side{
+    margin-left: 0;
+  }
+
+  .period{
+    transform:translateY(0px);
+  }
+
+  .seconds{
+    transform:translateY(0px);
   }
 
 }
