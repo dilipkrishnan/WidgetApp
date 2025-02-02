@@ -6,13 +6,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 #main{
   background: #282F3E;
 }
 
 @media (max-width: 1200px) {
 
-  #main{
+  #section2{
     display: none;
   }
   
