@@ -1,5 +1,5 @@
 //show the app only on desktop
-if(document.body.clientWidth < 1800){
+if(document.body.clientWidth < 1500){
   document.getElementById("main").style.visibility = "hidden";
 }
   
