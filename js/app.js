@@ -101,14 +101,15 @@ if(document.body.clientWidth < 1800){
 
   async function updateQuote() {
     // Fetch a random quote from the Quotable API
-    const response = await fetch("http://api.quotable.io/random");
+
+    const response = await fetch("https://dummyjson.com/quotes/random");
     const data = await response.json();
+
     if (response.ok) {
       // Update DOM elements
-      if(data.content.length < 125){
-        quote.textContent = "\" " + data.content + " \"";
+      if(data.quote.length < 125){
+        quote.textContent = "\" " + data.quote + " \"";
         cite.textContent = "- " + data.author;
-        console.log(data.content.length);
       }else{
         updateQuote();
       }
