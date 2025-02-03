@@ -378,15 +378,17 @@ body{
 @media (max-width: 400px) {
 
   .digital-clock{
-    width: 250px;
+    width: 275px;
     height: 135px;
+    margin-top: 75px;
   }
 
   .hours, .minutes {
     font-size: 3.5em;
     width: 75px;
-    padding: 0;
-    line-height: 100px;
+    padding: 0px;
+    line-height: 50px;
+    margin-top: 15px;
   }
 
   .dots{
@@ -398,11 +400,11 @@ body{
   }
 
   .period{
-    transform:translateY(0px);
+    transform:translateY(10px);
   }
 
   .seconds{
-    transform:translateY(0px);
+    transform:translateY(10px);
   }
 
 }
