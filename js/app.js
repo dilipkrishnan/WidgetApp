@@ -135,9 +135,7 @@
       forcastreading5.textContent = Math.round(data.daily.temperature_2m_max[5]);
 
       statusimage.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[0])+".png')";
-
-      forcaststatus1.style["background-image"] = "url('./img/"+ weatherImage
-      (data.daily.weathercode[1])+".png')";
+      forcaststatus1.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[1])+".png')";
       forcaststatus2.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[2])+".png')";
       forcaststatus3.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[3])+".png')";
       forcaststatus4.style["background-image"] = "url('./img/"+ weatherImage(data.daily.weathercode[4])+".png')";
